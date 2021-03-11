@@ -1,0 +1,32 @@
+*{
+
+	padding: 0px;
+}
+body{
+	height: 100%;
+	width: 100%;
+}
+
+h1{
+	text-align: center;
+	font-size: 6vw;
+}
+.container{
+	display: block;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	background-color: pink;
+	height: 100%;
+}
+
+.box{
+	width: 150px;
+	height: 150px;
+	background-color: purple;
+	padding: 1em;
+	margin-bottom: auto;
+	margin-top: auto;
+	position: relative;
+
+}
