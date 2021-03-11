@@ -12,6 +12,7 @@ h1{
 	font-size: 6vw;
 	margin: 0px;
 	padding-right: 20px;
+	position: absolute;
 }
 
 .container{
@@ -28,7 +29,5 @@ h1{
 	height: 150px;
 	background-color: purple;
 	padding: 1em;
-	margin-bottom: auto;
-	margin-top: auto;
 
 }
