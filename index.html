@@ -2,25 +2,46 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Clock</title>
+		<title>Clock HALLO</title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
+		<script src="scripts/app.js" defer></script>
 	</head>
-	<body>
-		<div class="container">
-			<h1>Clock</h1>
-			<div class="box">
-				<p id="hours">0</p>
+	<body id="body">
+		<div class="gridlayout">
+			<div id="grid-1"></div>
+
+			<div id="grid-2">
+				<h1>Clock</h1>
+				<div class="container">
+					<div class="box1">
+						<p id="hours" class="hours"></p>
+					</div>
+
+					<p class="dots1">:</p>
+
+					<div class="box2">
+						<p id="minutes" class="minutes"></p>
+					</div>
+
+					<p class="dots2">:</p>
+
+					<div class="box3">
+						<p id="seconds" class="seconds"></p>
+					</div>
+				</div>
+				<div class="box_date">
+					<p id="date" class="date"></p>
+				</div>
 			</div>
 
-			<div class="box">
-				<p id="minutes">0</p>
+			<div id="grid-3">
+				<div class="animation">
+					<div class="sun"></div>
+					<div class="moon"></div>
+				</div>
 			</div>
-
-			<div class="box">
-				<p id="seconds">0</p>
-			</div>
-
 		</div>
-	<script src="scripts/..."></script>
 	</body>
 </html>

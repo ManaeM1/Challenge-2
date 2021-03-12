@@ -1,3 +1,30 @@
+@font-family: 'Spartan', sans-serif;
+
+/* Grid-layout */
+#grid-1{
+	grid-area: grid_one
+}
+#grid-2{
+	grid-area: grid_two
+}
+#grid-3{
+	grid-area: grid_three
+}
+
+.gridlayout{
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	grid-gap: 0.1rem;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 
+		"grid_one"
+		"grid_two"
+		"grid_three";
+}
+
 *{
 	padding: 0px;
 }
@@ -5,29 +32,224 @@
 body, html{
 	height: 100%;
 	width: 100%;
+	background-color: #F5F5F5;
 }
 
+
+/* MOBILE */
 h1{
 	text-align: center;
-	font-size: 6vw;
+	font-size: 5vw;
 	margin: 0px;
-	padding-right: 20px;
-	position: absolute;
+	margin-bottom: 10px;
+	position: relative;
+	font-family: Spartan;
+	color: #707070;
+}
+
+#grid-2{
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
 .container{
 	display: flex;
-	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-	background-color: pink;
-	height: 100%;
 }
 
-.box{
-	width: 150px;
-	height: 150px;
-	background-color: purple;
-	padding: 1em;
+.box1, .box2, .box3{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	background-color: #F5F5F5;
+	padding: 10px;
+	margin: 25px;
+	font-family: Spartan;
+	font-size: 40px;
+	color: #707070;
+	text-align: center;
+	border-radius: 15px;
+	box-shadow: 6px 6px 11px #dedede, -6px -6px 11px #ffffff
+}
 
+p{
+	font-size: 40px;
+	color: #707070;
+}
+
+.box_date{
+	position: relative;
+}
+
+#date{
+	text-align: center;
+	margin: 0px;
+	font-family: Spartan;
+	font-size: 40px;
+	color: #707070;
+}
+
+/* Sun */
+.animation{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sun{
+	width: 120px;
+	height: 120px;
+	margin-top: 120px;
+	background-color: #F7DA1E;
+	border-radius: 50%;
+	box-shadow: 
+		0 0 0 20px #F7DA1E70, 
+		0 0 0 35px #F7DA1E50,
+		0 0 0 50px #F7DA1E20;
+	animation: sunshine 2000ms infinite linear forwards,
+				sunshine_rays 2000ms infinite linear;
+}
+
+@keyframes sunshine {
+	0%{
+		box-shadow: none;
+	}
+}
+
+@keyframes sunshine_rays {
+	0%{
+		box-shadow:
+			0 0 0 0px #F7DA1E70,  
+			0 0 0 20px #F7DA1E70, 
+			0 0 0 35px #F7DA1E50,
+			0 0 0 50px #F7DA1E20;
+	}
+}
+
+
+/* TABLET */
+@media only screen and (min-width: 500px){
+	.gridlayout{
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	grid-gap: 0.1rem;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-template-areas: 
+		"grid_one"
+		"grid_two"
+		"grid_three";
+	}
+	.box1, .box2, .box3{
+		width: 50px;
+		height: 50px;
+		margin: 15px;
+	}
+	#hours, #minutes, #seconds{
+		margin-top: 15px;
+		font-size: 20px;
+	}
+
+	#date{
+		font-size: 20px;
+	}
+
+	.sun{
+	width: 90px;
+	height: 90px;
+	margin-top: 60px;
+	background-color: #F7DA1E;
+	border-radius: 50%;
+	box-shadow: 
+		0 0 0 20px #F7DA1E70, 
+		0 0 0 35px #F7DA1E50,
+		0 0 0 50px #F7DA1E20;
+	animation: sunshine 2000ms infinite linear forwards,
+				sunshine_rays 2000ms infinite linear;
+	}
+
+	@keyframes sunshine {
+		0%{
+			box-shadow: none;
+		}
+	}
+
+	@keyframes sunshine_rays {
+		0%{
+			box-shadow:
+			0 0 0 0px #F7DA1E70,  
+			0 0 0 20px #F7DA1E70, 
+			0 0 0 35px #F7DA1E50,
+			0 0 0 50px #F7DA1E20;
+		}
+	}
+}
+
+
+/* LAPTOP */
+@media only screen and (min-width: 1000px){
+	.gridlayout{
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	grid-gap: 0.1rem;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-template-areas: 
+		"grid_one"
+		"grid_two"
+		"grid_three";
+	}
+
+	h1{
+		font-size: 3vw;
+	}
+
+	.box1, .box2, .box3{
+		width: 80px;
+		height: 80px;
+		margin: 30px;
+	}
+	#hours, #minutes, #seconds{
+		margin-top: 30px;
+		font-size: 30px;
+	}
+
+	#date{
+		font-size: 30px;
+	}
+
+	.sun{
+	width: 100px;
+	height: 100px;
+	margin-top: 70px;
+	background-color: #F7DA1E;
+	border-radius: 50%;
+	box-shadow: 
+		0 0 0 20px #F7DA1E70, 
+		0 0 0 35px #F7DA1E50,
+		0 0 0 50px #F7DA1E20;
+	animation: sunshine 2000ms infinite linear forwards,
+				sunshine_rays 2000ms infinite linear;
+	}
+
+	@keyframes sunshine {
+		0%{
+			box-shadow: none;
+		}
+	}
+
+	@keyframes sunshine_rays {
+		0%{
+			box-shadow:
+			0 0 0 0px #F7DA1E70,  
+			0 0 0 20px #F7DA1E70, 
+			0 0 0 35px #F7DA1E50,
+			0 0 0 50px #F7DA1E20;
+		}
+	}
 }
