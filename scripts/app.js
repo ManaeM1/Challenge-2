@@ -54,12 +54,13 @@ function change(){
 	var currentDate = document.getElementsByClassName("date")[0];
 
 	var hideSun = document.getElementsByClassName("sun")[0];
+	var hideMoon = document.getElementsByClassName("moon")[0];
 
 	
 	//day
 	if(changeTime >= 6 && changeTime < 18){
 		background.style.backgroundColor = "#F5F5F5";
-		hideSun.style.display = "block";
+		hideMoon.style.display = "none";
 	//night
 	} else if(changeTime >= 18 && changeTime < 24){
 		background.style.backgroundColor = "#1F1F3E";

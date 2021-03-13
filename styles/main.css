@@ -11,19 +11,7 @@
 	grid-area: grid_three
 }
 
-.gridlayout{
-	display: grid;
-	height: 100%;
-	width: 100%;
-	margin: 0 auto;
-	grid-gap: 0.1rem;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-areas: 
-		"grid_one"
-		"grid_two"
-		"grid_three";
-}
+
 
 *{
 	padding: 0px;
@@ -37,11 +25,25 @@ body, html{
 
 
 /* MOBILE */
+.gridlayout{
+	display: grid;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	grid-gap: 0.1rem;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 0.5fr 1fr;
+	grid-template-areas: 
+		"grid_one"
+		"grid_two"
+		"grid_three";
+}
+
 h1{
 	text-align: center;
 	font-size: 5vw;
 	margin: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	position: relative;
 	font-family: Spartan;
 	color: #707070;
@@ -50,7 +52,7 @@ h1{
 #grid-2{
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	height: 60%;
 }
 
 .container{
@@ -61,19 +63,21 @@ h1{
 
 .box1, .box2, .box3{
 	display: inline-block;
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 150px;
 	background-color: #F5F5F5;
 	padding: 10px;
-	margin: 25px;
+	margin: 20px;
 	font-family: Spartan;
-	font-size: 40px;
 	color: #707070;
 	text-align: center;
 	border-radius: 15px;
 	box-shadow: 6px 6px 11px #dedede, -6px -6px 11px #ffffff
 }
-
+#hours, #minutes, #seconds{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
 p{
 	font-size: 40px;
 	color: #707070;
@@ -100,7 +104,6 @@ p{
 .sun{
 	width: 120px;
 	height: 120px;
-	margin-top: 120px;
 	background-color: #F7DA1E;
 	border-radius: 50%;
 	box-shadow: 
@@ -127,9 +130,32 @@ p{
 	}
 }
 
+.moon{
+	margin-top: 50px;
+	width: 160px;
+	height: 160px;
+	background-color: #1F1F3E;
+	border-radius: 50%;
+	box-shadow: -30px 15px 10px 10px #FFFCEC;
+	animation: moon 2500ms infinite linear forwards,
+			moon_shine 2500ms infinite linear;
+}
+@keyframes moon {
+	0%{
+		box-shadow: none;
+	}
+}
+@keyframes moon_shine {
+	0%{
+		box-shadow: -30px 15px 10px 10px #ffffff;
+	}
+}
+
+
+
 
 /* TABLET */
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 600px){
 	.gridlayout{
 	display: grid;
 	height: 100%;
@@ -137,24 +163,25 @@ p{
 	margin: 0 auto;
 	grid-gap: 0.1rem;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.5fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 1fr;
 	grid-template-areas: 
 		"grid_one"
 		"grid_two"
 		"grid_three";
 	}
 	.box1, .box2, .box3{
-		width: 50px;
+		/*width: 50px;
 		height: 50px;
-		margin: 15px;
+		margin: 15px;*/
 	}
 	#hours, #minutes, #seconds{
-		margin-top: 15px;
-		font-size: 20px;
+		margin-top: 50px;
+		font-size: 50px;
 	}
 
 	#date{
-		font-size: 20px;
+		font-size: 35px;
+		margin-top: 15px;
 	}
 
 	.sun{
