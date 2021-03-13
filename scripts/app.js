@@ -34,7 +34,7 @@ setInterval(clock, 1000);
 
 
 
-
+//changing styles from day to night
 function change(){
 	var time = new Date();
 	var changeTime = time.getHours();
