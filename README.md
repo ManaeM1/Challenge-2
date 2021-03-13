@@ -4,5 +4,5 @@
 
 # Welkom in mijn repository
 Dit is van het vak XT2.
-De website die ik heb gemaakt gaat over Spongebob.
-Je kunt hem vinden op  https://manaem1.github.io/Challenge-2/index.html
+Hierin laat ik mijn digitale klok zien. De klok veranderd mee met dag naar nacht. 
+De link is hier te vinden: https://manaem1.github.io/Challenge-2/
