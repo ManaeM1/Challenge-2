@@ -1,4 +1,4 @@
-//code for clock and date
+//Function for clock and date
 function clock(){
 
 	//clock
@@ -34,7 +34,7 @@ setInterval(clock, 1000);
 
 
 
-//changing styles from day to night
+//Function that changes the clock lay-out from day to night
 function change(){
 	var time = new Date();
 	var changeTime = time.getHours();

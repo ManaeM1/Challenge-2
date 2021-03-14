@@ -34,7 +34,7 @@ body, html{
 	margin: 0 auto;
 	grid-gap: 0.1rem;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 0.5fr 1fr;
+	grid-template-rows: 0.5fr 0.5fr 1fr;
 	grid-template-areas: 
 		"grid_one"
 		"grid_two"
@@ -43,7 +43,7 @@ body, html{
 
 h1{
 	text-align: center;
-	font-size: 5vw;
+	font-size: 6vw;
 	margin: 0px;
 	margin-bottom: 15px;
 	position: relative;
@@ -65,23 +65,25 @@ h1{
 
 .box1, .box2, .box3{
 	display: inline-block;
-	width: 150px;
-	height: 150px;
+	width: 50px;
+	height: 50px;
 	background-color: #F5F5F5;
 	padding: 10px;
-	margin: 20px;
+	margin: 10px;
 	font-family: Spartan;
 	color: #707070;
 	text-align: center;
 	border-radius: 15px;
 	box-shadow: 6px 6px 11px #dedede, -6px -6px 11px #ffffff
 }
+
 #hours, #minutes, #seconds{
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-bottom: 0px;
 }
+
 p{
-	font-size: 40px;
+	font-size: 20px;
 	color: #707070;
 }
 
@@ -91,9 +93,9 @@ p{
 
 #date{
 	text-align: center;
-	margin: 0px;
+	margin-top: 12px;
 	font-family: Spartan;
-	font-size: 40px;
+	font-size: 16px;
 	color: #707070;
 }
 
@@ -103,9 +105,11 @@ p{
 	justify-content: center;
 	align-items: center;
 }
+
 .sun{
-	width: 120px;
-	height: 120px;
+	margin-top: 50px;
+	width: 90px;
+	height: 90px;
 	background-color: #F7DA1E;
 	border-radius: 50%;
 	box-shadow: 
@@ -121,7 +125,6 @@ p{
 		box-shadow: none;
 	}
 }
-
 @keyframes sunshine_rays {
 	0%{
 		box-shadow:
@@ -132,13 +135,14 @@ p{
 	}
 }
 
+/* Moon */
 .moon{
 	margin-top: 50px;
-	width: 160px;
-	height: 160px;
+	width: 80px;
+	height: 80px;
 	background-color: #1F1F3E;
 	border-radius: 50%;
-	box-shadow: -30px 15px 10px 10px #FFFCEC;
+	box-shadow: -30px 10px 10px 10px #FFFCEC;
 	animation: moon 2500ms infinite linear forwards,
 			moon_shine 2500ms infinite linear;
 }
@@ -149,10 +153,9 @@ p{
 }
 @keyframes moon_shine {
 	0%{
-		box-shadow: -30px 15px 10px 10px #ffffff;
+		box-shadow: -30px 10px 10px 10px #ffffff;
 	}
 }
-
 
 
 
@@ -171,22 +174,33 @@ p{
 		"grid_two"
 		"grid_three";
 	}
-	.box1, .box2, .box3{
-	width: 50px;
-	height: 50px;
-	margin: 15px;*/
 
+	h1{
+		font-size: 5vw;
+		margin-bottom: 20px;
 	}
+
+	.box1, .box2, .box3{
+		width: 90px;
+		height: 90px;
+		margin: 15px;*/
+	}
+
 	#hours, #minutes, #seconds{
-		margin-top: 50px;
-		font-size: 50px;
+		margin-top: 30px;
+		font-size: 35px;
+	}
+
+	.dots1, .dots2{
+		font-size: 30px;
 	}
 
 	#date{
-		font-size: 35px;
+		font-size: 25px;
 		margin-top: 15px;
 	}
 
+	/* Sun */
 	.sun{
 	width: 90px;
 	height: 90px;
@@ -206,7 +220,6 @@ p{
 			box-shadow: none;
 		}
 	}
-
 	@keyframes sunshine_rays {
 		0%{
 			box-shadow:
@@ -214,6 +227,28 @@ p{
 			0 0 0 20px #F7DA1E70, 
 			0 0 0 35px #F7DA1E50,
 			0 0 0 50px #F7DA1E20;
+		}
+	}
+
+	/* Moon */
+	.moon{
+		margin-top: 60px;
+		width: 80px;
+		height: 80px;
+		background-color: #1F1F3E;
+		border-radius: 50%;
+		box-shadow: -30px 10px 10px 10px #FFFCEC;
+		animation: moon 2500ms infinite linear forwards,
+				moon_shine 2500ms infinite linear;
+	}
+	@keyframes moon {
+		0%{
+			box-shadow: none;
+		}
+	}
+	@keyframes moon_shine {
+		0%{
+			box-shadow: -30px 10px 10px 10px #ffffff;
 		}
 	}
 }
@@ -237,22 +272,26 @@ p{
 
 	h1{
 		font-size: 3vw;
+		margin: 0px;
 	}
 
 	.box1, .box2, .box3{
-		width: 80px;
-		height: 80px;
+		width: 90px;
+		height: 90px;
 		margin: 30px;
 	}
+
 	#hours, #minutes, #seconds{
-		margin-top: 30px;
-		font-size: 30px;
+		margin-top: 25px;
+		font-size: 40px;
 	}
 
 	#date{
 		font-size: 30px;
+		margin: 0px;
 	}
 
+	/* Sun */
 	.sun{
 	width: 100px;
 	height: 100px;
@@ -272,7 +311,6 @@ p{
 			box-shadow: none;
 		}
 	}
-
 	@keyframes sunshine_rays {
 		0%{
 			box-shadow:
@@ -280,6 +318,28 @@ p{
 			0 0 0 20px #F7DA1E70, 
 			0 0 0 35px #F7DA1E50,
 			0 0 0 50px #F7DA1E20;
+		}
+	}
+
+	/* Moon */
+	.moon{
+		margin-top: 60px;
+		width: 100px;
+		height: 100px;
+		background-color: #1F1F3E;
+		border-radius: 50%;
+		box-shadow: -30px 10px 10px 10px #FFFCEC;
+		animation: moon 2500ms infinite linear forwards,
+				moon_shine 2500ms infinite linear;
+	}
+	@keyframes moon {
+		0%{
+			box-shadow: none;
+		}
+	}
+	@keyframes moon_shine {
+		0%{
+			box-shadow: -30px 10px 10px 10px #ffffff;
 		}
 	}
 }
