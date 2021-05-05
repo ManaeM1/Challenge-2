@@ -22,9 +22,9 @@ function clock(){
 		seconds = '0' + seconds;
 	}
 
-	document.getElementById('hours').innerHTML = today.getHours();
-	document.getElementById('minutes').innerHTML = today.getMinutes();
-	document.getElementById('seconds').innerHTML = today.getSeconds();
+	document.getElementById('hours').innerHTML = hours;
+	document.getElementById('minutes').innerHTML = minutes;
+	document.getElementById('seconds').innerHTML = seconds;
 
 	//date
 	var date = new Date();
