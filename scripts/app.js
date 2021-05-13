@@ -22,9 +22,9 @@ function clock(){
 		seconds = '0' + seconds;
 	}
 
-	document.getElementById('hours').innerHTML = today.getHours();
-	document.getElementById('minutes').innerHTML = today.getMinutes();
-	document.getElementById('seconds').innerHTML = today.getSeconds();
+	document.getElementById('hours').innerHTML = hours;
+	document.getElementById('minutes').innerHTML = minutes;
+	document.getElementById('seconds').innerHTML = seconds;
 
 	//date
 	var date = new Date();
@@ -62,7 +62,7 @@ function change(){
 		background.style.backgroundColor = "#F5F5F5";
 		hideMoon.style.display = "none";
 	//night
-	} else if(changeTime >= 18 && changeTime < 24){
+	} else{
 		background.style.backgroundColor = "#1F1F3E";
 		title.style.color = "#F5F5F5";
 		boxColor1.style.backgroundColor = "#1F1F3E";
@@ -82,15 +82,7 @@ function change(){
 		currentDate.style.color = "#F5F5F5";
 
 		hideSun.style.display = "none";
-
-	} else{
-		background.style.backgroundColor = "#1F1F3E";
-		//boxColor1.style.backgroundColor = "#1F1F3E";
-		//title.style.color = "#F5F5F5";
-
-	}
-
-	console.log("test");
+	} 
 }
 change();
 
